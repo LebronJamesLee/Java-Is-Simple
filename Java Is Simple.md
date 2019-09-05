@@ -82,3 +82,9 @@
 
 [**HashMap源码解析&&学习方法**](https://mp.weixin.qq.com/s?__biz=MzU0ODg4ODQ5Mg==&mid=2247483743&idx=1&sn=47008a4a19c05710b1d42867fd09cff0&chksm=fbb90b9cccce828a38d988b4cdb95cf6cea1b5d85d2ec7bc7639d2ca23f9a4fb4f2133097dfd&token=275277009&lang=zh_CN#rd)
 
+
+
+**一起加油！**
+
+> **操作系统、计算机网络、数据库/数据库设计、数据结构与算法/题目锻炼、JavaSE/JavaEE/WEB技术栈 、设计模式 、源码解析、 Java多线程/并发、 JVM 、项目场景/产品问题/系统设计方案/开发问题 、分布式/微服务/高并发-高性能-高可用架构问题、 SpringCloud生态及各类框架技术、 各类编程难题/思维逻辑挑战、 Java修炼之道书籍推荐。**
+
