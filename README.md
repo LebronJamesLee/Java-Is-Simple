@@ -66,5 +66,5 @@
 
 
 
-[Java的修炼之道完整学习清单/面试知识](https://github.com/NolanJcn/Java-Is-Simple/blob/master/Java Is Simple.md)
+[Java的修炼之道完整学习清单/面试知识](https://github.com/NolanJcn/Java-Is-Simple)
 
