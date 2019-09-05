@@ -1,5 +1,7 @@
 ###### 一般点进来的人都认为能够找到一份Java的修炼之道完整学习清单或者面试知识。
 
+**ps：清单在文末**
+
 ###### 而当今互联网技术已经是学不过了，快速寻找到自己的定位非常的重要。
 
 ###### 很多人一开始都要先学HTML/CSS，然后就是JS。
@@ -64,4 +66,4 @@
 
 
 
-![Java的修炼之道完整学习清单]()
+[Java的修炼之道完整学习清单/面试知识]([https://github.com/NolanJcn/Java-Is-Simple/blob/master/Java%20Is%20Simple.md](https://github.com/NolanJcn/Java-Is-Simple/blob/master/Java Is Simple.md))
