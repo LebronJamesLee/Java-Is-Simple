@@ -82,7 +82,7 @@
 
 [**面向过程与面向对象/五大原则；抽象类、接口、重载与重写；JVM、JDK、JRE；Oracle JDK 与 Open JDK；Java与C++的区别；应用程序和小程序**](https://mp.weixin.qq.com/s?__biz=MzU0ODg4ODQ5Mg==&mid=2247483982&idx=1&sn=87b4e38796aea6886c68de22ed288a81&chksm=fbb9088dccce819b6c119691402c2476726a3bdb8153ea20a49814b3ef690525044a2343487e&token=1823468157&lang=zh_CN#rd)
 
-[**switch对String的支持；为什么说String是“不可变的”呢？；字符串池、常量池、intern；字符串拼接的几种方式和区别/JDK1.8；String,StringBuffer与StringBuilder的区别?字符截取/JDK6与JDK7的不同；**](https://mp.weixin.qq.com/s?__biz=MzU0ODg4ODQ5Mg==&mid=2247483982&idx=1&sn=87b4e38796aea6886c68de22ed288a81&chksm=fbb9088dccce819b6c119691402c2476726a3bdb8153ea20a49814b3ef690525044a2343487e&token=1823468157&lang=zh_CN#rd)
+[**switch对String的支持；为什么说String是“不可变的”呢？；字符串池、常量池、intern；字符串拼接的几种方式和区别/JDK1.8；String,StringBuffer与StringBuilder的区别?字符截取/JDK6与JDK7的不同；**](https://mp.weixin.qq.com/s?__biz=MzU0ODg4ODQ5Mg==&mid=2247483994&idx=1&sn=16827edc44790deaa042135bd912346c&chksm=fbb90899ccce818f6182dccaccc6d9762d8e7c513e1420fcb5fe78a5e3e4d39fac530a68b860&token=1823468157&lang=zh_CN#rd)
 
 #### JDK8容器类
 
