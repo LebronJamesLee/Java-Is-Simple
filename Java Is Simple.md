@@ -78,6 +78,12 @@
 
 [**理解迭代器模式**](https://mp.weixin.qq.com/s?__biz=MzU0ODg4ODQ5Mg==&mid=2247483718&idx=1&sn=3de32120ede1aeb196b9e79e1f6c7356&chksm=fbb90b85ccce82930dea3764c21305e139583956d71db57055b98f79eb0fe379e13c8dbc48a5&token=275277009&lang=zh_CN#rd)
 
+#### Java基础
+
+[**面向过程与面向对象/五大原则；抽象类、接口、重载与重写；JVM、JDK、JRE；Oracle JDK 与 Open JDK；Java与C++的区别；应用程序和小程序**](https://mp.weixin.qq.com/s?__biz=MzU0ODg4ODQ5Mg==&mid=2247483982&idx=1&sn=87b4e38796aea6886c68de22ed288a81&chksm=fbb9088dccce819b6c119691402c2476726a3bdb8153ea20a49814b3ef690525044a2343487e&token=1823468157&lang=zh_CN#rd)
+
+[**switch对String的支持；为什么说String是“不可变的”呢？；字符串池、常量池、intern；字符串拼接的几种方式和区别/JDK1.8；String,StringBuffer与StringBuilder的区别?字符截取/JDK6与JDK7的不同；**](https://mp.weixin.qq.com/s?__biz=MzU0ODg4ODQ5Mg==&mid=2247483982&idx=1&sn=87b4e38796aea6886c68de22ed288a81&chksm=fbb9088dccce819b6c119691402c2476726a3bdb8153ea20a49814b3ef690525044a2343487e&token=1823468157&lang=zh_CN#rd)
+
 #### JDK8容器类
 
 [**Java Collection&Map体系了解**](https://mp.weixin.qq.com/s?__biz=MzU0ODg4ODQ5Mg==&mid=2247483728&idx=1&sn=958ff4490427ce25fee1f60a3386e1e0&chksm=fbb90b93ccce8285c9ffa986175ebed5546d8d2024f19d7f7b1c1b69def1ba92fbec17a3552b&token=275277009&lang=zh_CN#rd)
@@ -94,7 +100,9 @@
 
 
 
-**一起加油！**
+###### **一起加油！**
+
+***更新路线：***
 
 > **操作系统、计算机网络、数据库/数据库设计、数据结构与算法/题目锻炼、JavaSE/JavaEE/WEB技术栈 、设计模式 、源码解析、 Java多线程/并发、 JVM 、项目场景/产品问题/系统设计方案/开发问题 、分布式/微服务/高并发-高性能-高可用架构问题、 SpringCloud生态及各类框架技术、 各类编程难题/思维逻辑挑战、 Java修炼之道书籍推荐。**
 
