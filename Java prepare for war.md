@@ -26,23 +26,17 @@
 
 ##### 首先呢？我们应该来画个系统架构图（这是一个基础能力，面试官很可能这样要求你的）：
 
-**场景视图：**
+**系统功能图：**
+
+![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20prepare%20for%20war/%E7%B3%BB%E7%BB%9F%E5%8A%9F%E8%83%BD%E5%9B%BE.png?raw=true)
 
 
 
-**逻辑视图：**
 
 
-
-**物理视图：**
-
+**系统基础架构：**
 
 
-**处理流程视图：**
-
-
-
-**开发视图：**
 
 
 
