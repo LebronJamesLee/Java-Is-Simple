@@ -54,7 +54,67 @@
 
 **控制层方法时序图：**
 
+**LoginController_doLogin：**
 
+![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20prepare%20for%20war/LoginController_doLogin.png?raw=true)
+
+
+
+**GoodsController_list:**
+
+![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20prepare%20for%20war/GoodsController_list.png?raw=true)
+
+**GoodsController_detail:**
+
+![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20prepare%20for%20war/GoodsController_detail.png?raw=true)
+
+
+
+**GoodsController_detail2:**
+
+![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20prepare%20for%20war/GoodsController_detail2.png?raw=true)
+
+**MiaoshaController_afterPropertiesSet:**
+
+![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20prepare%20for%20war/MiaoshaController_afterPropertiesSet.png?raw=true)
+
+**MiaoshaController_reset:**
+
+![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20prepare%20for%20war/MiaoshaController_reset.png?raw=true)
+
+**MiaoshaController_miaosha:**
+
+![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20prepare%20for%20war/MiaoshaController_miaosha.png?raw=true)
+
+**MiaoshaController_miaoshaResult:**
+
+![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20prepare%20for%20war/MiaoshaController_miaoshaResult.png?raw=true)
+
+**MiaoshaController_getMiaoshaPath:**
+
+![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20prepare%20for%20war/MiaoshaController_getMiaoshaPath.png?raw=true)
+
+**MiaoshaController_getMiaoshaVerifyCod:**
+
+![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20prepare%20for%20war/MiaoshaController_getMiaoshaVerifyCod.png?raw=true)
+
+
+
+**OrderController_info:**
+
+![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20prepare%20for%20war/OrderController_info.png?raw=true)
+
+**SampleController_dbGet:**
+
+![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20prepare%20for%20war/SampleController_dbGet.png?raw=true)
+
+**SampleController_redisGet:**
+
+![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20prepare%20for%20war/SampleController_redisGet.png?raw=true)
+
+**SampleController_redisSet:**
+
+![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20prepare%20for%20war/SampleController_redisSet.png?raw=true)
 
 这样的好处在于哪里呢？
 
