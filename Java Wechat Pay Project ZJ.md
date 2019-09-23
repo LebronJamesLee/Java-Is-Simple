@@ -10,7 +10,7 @@
 
 > 列表展示、视频详情、微信扫描登录、微信扫描支付、订单列表。
 
-**面试问题1：你在这个项目中充当什么角色？**
+**面试题1：你在这个项目中充当什么角色？**
 
 > 我在该项目中主要做：支付和扫描登录这些。
 
@@ -53,9 +53,115 @@
 
 **四、数据库设计**
 
+![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20Wechat%20Pay%20Project%20ZJ/%E6%95%B0%E6%8D%AE%E5%BA%93er%E5%9B%BE.png?raw=true)
 
+不关键的数据做缓存或者冗余，而不是做成实时的。
+
+**er图：**
+
+> 实体对象：矩形
+> 属性：椭圆
+> 关系：菱形
+
+video表\video_order表\user表\comment表\chapter张\episode节
+
+**字段冗余：**
+
+> **什么是字段冗余**
+>
+> 冗余字段就是本存在一张表的字段，也出现在另一张表中。
+>
+> **什么时候选择字段冗余**
+>
+> 看需求，如果影响不大，利于开发效率，可适当的增加冗余字段。
+>
+> **优点**
+>
+> 不使用字段冗余，如果要查询所有数据，并用到其他表的一个字段，就要用join进行连接查询，那么当有很多表的时候，那么查询就很慢了。使用字段冗余，直接给表添加该字段就速度快多了。
+>
+> **缺点**				 
+>
+> 如果对该字段进行增删改，对应也要对那个表的字段进行增删改，这时还要去了解所有表中的冗余字段，以防有些表中的字段没对应修改。
+
+Mysql测试数据导入。
+
+刚开始肯定不是设计的很全面的，要结合业务设计。
 
 **五、项目搭建、逆向工程构建、热部署、分层分包及资源文件处理、开源工具的选择/优缺点、接口配置文件自动映射到属性和实体类配置**
+
+项目依赖：
+
+> ```
+> spring-boot-starter-data-redis
+> spring-boot-starter-web
+> spring-boot-starter-test
+> spring-boot-devtools
+> mybatis-spring-boot-starter
+> mysql-connector-java
+> druid
+> pagehelper
+> jjwt
+> httpclient
+> httpmime
+> commons-codec
+> commons-logging
+> httpcore
+> gson
+> javase
+> core
+> ```
+
+热部署。
+
+项目目录结构：
+
+```
+controller
+service
+	impl
+mapper
+utils
+domain
+config
+interceoter
+dto
+```
+
+pageHeper分页拦截器：
+
+> 好处：开发方便，使用简单，使用aop方式进行分页，只需要引入相关依赖，然后PageHelper.startPage(page, size);  开启分页。
+> 弊端：对于分库分表等情况下使用有问题，深度分页逻辑判断会复杂。
+
+**面试题2：写一个分页sql语句？**
+
+> 问面试官数据量有多大、表字段多不多，根据情况分为普通分页与深度分页：
+>
+> 如果表数据万级别的，如果id自增，那么不使用limit去查询，而是通过where id条件过滤或者特定的字段对前面无用的数据进行过滤然后进行查询，因为深度分页会牵扯磁盘IO操作，影响性能。
+>
+> 并且应该指定字段去查询，而不是用*去全部查询。
+
+```sql
+select * from video limit 0,3
+恶意深度分页攻击：
+select * from video limit 1000005,3
+改进：
+select * from video where id > 1000004 limit 0,3
+```
+
+```
+封装的好坏
+关于抽象和不抽象的选择，比如tk这些工具，通用mapper，service，controller
+好处：
+代码量大大减少，开发新模块可以马上进行使用
+弊端：
+对应过度封装，新手等比较难理解，不能保证团队里面所有人都有对应的水平，或者有高度封装的思想，也不是过度封装
+```
+
+封装通用工具类，如缓存操作等、利于解耦，如切换缓存框架。
+
+接口配置文件自动映射到属性和实体类配置。
+
+
 
 **六、视频列表接口开发**
 
