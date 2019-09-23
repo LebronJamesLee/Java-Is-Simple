@@ -24,9 +24,28 @@
 
 **二、开发的完整开发流程**
 
-
+![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20Wechat%20Pay%20Project%20ZJ/%E4%BA%A7%E5%93%81%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.png?raw=true)
 
 **三、需求分析架构设计**
+
+> **功能：**
+>
+> 视频列表、微信扫码登录、下单微信支付。
+>
+> **架构设计：**
+>
+> 前后端分离—>方案：node渲染
+>
+> （选择这个）动静分离—>方案：静态资源如html，js放在cdn或者nginx服务器上
+>
+> **技术选择：**
+> 后端技术选择：IDEA + Springboot2.0 + redis4.0+ HttpClient + mysql + ActiveMQ消息队列
+>
+> 前端技术选择：HTML5 + bootstrapt + jquery
+>
+> 测试要求：首页和视频详情页qps单机qps要求 2000+
+
+
 
 **四、数据库设计**
 
