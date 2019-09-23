@@ -159,9 +159,21 @@ select * from video where id > 1000004 limit 0,3
 
 封装通用工具类，如缓存操作等、利于解耦，如切换缓存框架。
 
-接口配置文件自动映射到属性和实体类配置。
+MySQL逆向工程。
 
+接口配置文件自动映射到属性和实体类配置：
 
+> 利用配置文件进行解耦。
+>
+> 使用@value注解配置文件自动映射到属性和实体类。
+>
+> 添加 @Component或者Configuration 注解。
+>
+> 使用 @PropertySource 注解指定配置文件位置：(属性名称规范: 大模块.子模块.属性名)
+>
+> @PropertySource(value="classpath:application.properties")
+>
+> 必须 通过注入IOC对象Resource 进来 ， 才能在类中使用获取的配置文件值。
 
 **六、视频列表接口开发**
 
