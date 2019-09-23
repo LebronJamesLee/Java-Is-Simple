@@ -45,9 +45,15 @@
 >
 > 测试要求：首页和视频详情页qps单机qps要求 2000+
 
+![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20Wechat%20Pay%20Project%20ZJ/%E6%9E%B6%E6%9E%84%E5%9B%BE.png?raw=true)
 
+将页面列表信息缓存到redis中去，这样减少对数据库的访问。
+
+用户点击浏览器，前端发送AJAX请求到nginx里去，nginx再分发到后端服务器。
 
 **四、数据库设计**
+
+
 
 **五、项目搭建、逆向工程构建、热部署、分层分包及资源文件处理、开源工具的选择/优缺点、接口配置文件自动映射到属性和实体类配置**
 
