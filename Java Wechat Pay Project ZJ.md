@@ -250,6 +250,8 @@ mybatis.configuration.map-underscore-to-camel-case=true
 ```
 **十、动态Sql语句Mybaties SqlProvider**
 
+**面试题3：如果一张表有很多字段，就只是单单的要更新几个属性，需要怎么实现？**
+
 ```Java
 1、
 @UpdateProvider(type=VideoSqlProvider.class,method="updateVideo")  更新
@@ -275,6 +277,10 @@ public String updateVideo(final Video video){
 } 
 ```
 
+**面试题4：为什么包装类型的属性才能进行!null判断？**
+
+> 因为包装类型需要通过new在堆中分配内存，然后将对象放入堆中，而基本类型是直接将变量值放入栈中，两者的初始值不同，例如int初始值为0，而Integer的初始值为null，所以包装类型能够进行!null的判断。
+
 **十一、PageHelper分页插件使用**
 
 ```Java 
@@ -285,7 +291,6 @@ public String updateVideo(final Video video){
      <artifactId>pagehelper</artifactId>
      <version>4.1.0</version>
 </dependency>
-
 2、增加配置文件
 @Configuration
 public class MyBatisConfig {
@@ -300,18 +305,21 @@ public class MyBatisConfig {
 	return pageHelper;
 	}	
 }
-
 3、包装类
 PageHelper.startPage(page, size);
 PageInfo<VideoOrder> pageInfo = new PageInfo<>(list);
-
-
 4、基本原理	
 sqlsessionFactory -> sqlSession-> executor -> mybatis sql statement
 通过mybatis plugin 增加拦截器，然后拼装分页
 org.apache.ibatis.plugin.Interceptor
 
 ```
+
+PageHelper分页大体流程:
+
+> SqlSessionFactory——>SqlSession——>executor—|  拦截器 |—>statement。
+>
+> 拦截器/Plugins-Interceptor：limit ？，？ （ThreadLocal获取用户变量）
 
 **十二、JWT微服务下的用户登录权限校验**
 
@@ -320,9 +328,8 @@ org.apache.ibatis.plugin.Interceptor
 ```
 1、单机tomcat应用登录检验
 sesssion保存在浏览器和应用服务器会话之间
-用户登录成功，服务端会保证一个session，当然会给客户端一个sessionId，
-客户端会把sessionId保存在cookie中，每次请求都会携带这个sessionId
-
+用户登录成功，服务端会保存一个session，当然会给客户端一个session Id，
+客户端会把sessionId保存在cookie中，每次请求都会携带这个session Id
 2、分布式应用中session共享
 真实的应用不可能单节点部署，所以就有个多节点登录session共享的问题需要解决
      1）tomcat支持session共享，但是有广播风暴；用户量大的时候，占用资源就严重，不推荐
@@ -330,6 +337,41 @@ sesssion保存在浏览器和应用服务器会话之间
           服务端使用UUID生成随机64位或者128位token，放入redis中，然后返回给客户端并存储在cookie中
           用户每次访问都携带此token，服务端去redis中校验是否有此用户即可
 ```
+
+
+
+**面试题5：session、cookie、token的区别？**
+
+> ##### **session：** 
+>
+> 多个用户登录系统，系统为了辨别用户，就要为每个用户发一个标识session id ，这是一串随机字符串，用户越多，服务器的开销就越大。
+>
+> 此时就需要通过集群，但是如果是这样一种情况：例如登录是在服务器A上进行的，那么session id自然是在服务器A上的，这时候如果下一个请求被转发到服务器B上呢？服务器B可没有该session id啊。此时要怎么办？这个就是典型的分布式session一致性问题？如果没有解决这个问题，那么用户将出现频繁的登录操作。
+>
+> ###### 如何保证分布式session的一致性呢？
+>
+> 参考链接：<https://blog.csdn.net/u010028869/article/details/50773174?ref=myread#commentBox>
+>
+> **cookie：**
+>
+> 一个文本文件，保存在浏览器里的数据，也就是保存在客户端磁盘空间里，cookie保存着用户登录的数据，方便下一次访问浏览器，为确保不被恶意使用，通常会对cookie的数量进行限制。
+>
+> cookie可以在本机进行修改，故没有比session安全。
+>
+> **token：**
+>
+> 通过上面的解释我们大概能知道session是为了解决用户与服务器之间的验证问题：
+>
+> ```
+> 可是如果不保存这些session id ,  怎么验证客户端发给我的session id 的确是我生成的呢？  如果不去验证，我们都不知道他们是不是合法登录的用户， 那些不怀好意的家伙们就可以伪造session id , 为所欲为了。
+> 嗯，对了，关键点就是验证 ！
+> ```
+>
+> 对于验证还有另外一种很常用的解决方式：通过令牌token进行无状态的签名验证。
+>
+> 参考链接：<https://www.cnblogs.com/moyand/p/9047978.html>
+
+
 
 **十四、微服务下登录检验解决方案 JWT讲解**
 
