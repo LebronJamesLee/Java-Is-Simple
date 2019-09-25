@@ -338,6 +338,18 @@ sesssion保存在浏览器和应用服务器会话之间
           用户每次访问都携带此token，服务端去redis中校验是否有此用户即可
 ```
 
+![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20Wechat%20Pay%20Project%20ZJ/%E5%88%86%E5%B8%83%E5%BC%8Fsession%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.png?raw=true)
+
+用户访问浏览器进行登录操作，登录成功后，浏览器会存储登录成功的凭证，如果是在负载均衡分发的多节点下，之前访问的节点1，当要访问节点2的时候，发现节点2没有存储sessionid，这样就得重新登录了。
+
+解决方案一：tomcat开启session 共享，但是每个session都会占用内存，如果节点1的一百个用户都这样来访问节点2的话，那么节点1的所有session都要复制到节点2上。当用户数达到了百万级别以上的话，那么这种方式就不可行了。
+
+解决方案二：redis集群存储登录token，用户登录成功后就生成一个token，可以是在节点中通过UUID来生成
+
+一个64/128位的随机字符串，然后将该字符串保存到redis中去，浏览器访问服务器节点，服务器从redis中去拿token，然后用户第一次登录成功保存的token就和redis中token进行校验，如果校验存在就表示登录成功，如果不对就不成功。所以现在不管是在哪个节点下去访问，该节点只要从redis中去取，然后进行校验就可以了。
+
+解决方案三：通过加解密算法生成token校验，
+
 
 
 **面试题5：session、cookie、token的区别？**
