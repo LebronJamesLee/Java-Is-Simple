@@ -1,4 +1,4 @@
-## Java Wechat Pay Project ZJ
+## Java Wechat Payment Project ZJ
 
 ###### 视频课程项目之微信支付系统——整个项目的完整生命周期。
 
@@ -24,7 +24,7 @@
 
 **二、开发的完整开发流程**
 
-![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20Wechat%20Pay%20Project%20ZJ/%E4%BA%A7%E5%93%81%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B.png?raw=true)
+![](https://user-images.githubusercontent.com/46838937/65655943-972fab80-e050-11e9-9ef9-5734e0683d64.png)
 
 **三、需求分析架构设计**
 
@@ -45,7 +45,7 @@
 >
 > 测试要求：首页和视频详情页qps单机qps要求 2000+
 
-![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20Wechat%20Pay%20Project%20ZJ/%E6%9E%B6%E6%9E%84%E5%9B%BE.png?raw=true)
+![架构图](https://user-images.githubusercontent.com/46838937/65655966-af9fc600-e050-11e9-835f-9a2dcc0346ce.png)
 
 将页面列表信息缓存到redis中去，这样减少对数据库的访问。
 
@@ -53,7 +53,7 @@
 
 **四、数据库设计**
 
-![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20Wechat%20Pay%20Project%20ZJ/%E6%95%B0%E6%8D%AE%E5%BA%93er%E5%9B%BE.png?raw=true)
+![数据库er图](https://user-images.githubusercontent.com/46838937/65656014-d8c05680-e050-11e9-925f-acefd2a3ed2a.png)
 
 不关键的数据做缓存或者冗余，而不是做成实时的。
 
@@ -338,7 +338,7 @@ sesssion保存在浏览器和应用服务器会话之间
           用户每次访问都携带此token，服务端去redis中校验是否有此用户即可
 ```
 
-![](https://github.com/NolanJcn/Java-Is-Simple/blob/master/%5Bimg%5DJava%20Wechat%20Pay%20Project%20ZJ/%E5%88%86%E5%B8%83%E5%BC%8Fsession%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.png?raw=true)
+![分布式session解决方案](https://user-images.githubusercontent.com/46838937/65656034-efff4400-e050-11e9-9a2d-b114489b484f.png)
 
 用户访问浏览器进行登录操作，登录成功后，浏览器会存储登录成功的凭证，如果是在负载均衡分发的多节点下，之前访问的节点1，当要访问节点2的时候，发现节点2没有存储sessionid，这样就得重新登录了。
 
@@ -502,6 +502,8 @@ signature:把header与payload进行加密。
 	画图讲解
 2、如果想看时序图知识，请跳转到微信支付章节，时序图知识讲解
 ```
+
+![微信扫描登录交互流程](https://user-images.githubusercontent.com/46838937/65656054-02797d80-e051-11e9-85ae-5d086a82bb42.png)
 
 **二十、微信授权一键登录开发之授权URL获取**
 
