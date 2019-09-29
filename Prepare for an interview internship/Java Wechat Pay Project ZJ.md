@@ -1,4 +1,4 @@
-## Java Wechat Payment Project ZJ
+## Java Wechat Pay Project ZJ
 
 ###### 视频课程项目之微信支付系统——整个项目的完整生命周期。
 
@@ -724,13 +724,10 @@ https://pay.weixin.qq.com/wiki/doc/api/native.php?chapter=6_5
 	 @Insert("")
 	 @Options(useGeneratedKeys=true, keyProperty="id", keyColumn="id")   //keyProperty java对象的属性；keyColumn表示数据库的字段
 	 int insert(VideoOrder order);
- 
 	 @Select("SELECT * FROM video_order WHERE id = #{id}")
 	 VideoOrder findById(int id);
-
 	 @Select("SELECT * FROM video_order WHERE id = #{id}")
 	 VideoOrder findByOutTradeNo(String  outTradeNo);
-
 	 @Delete("DELETE FROM video_order WHERE id =#{id}")
 	  int delete(int  id);
 ```
@@ -744,6 +741,10 @@ https://pay.weixin.qq.com/wiki/doc/api/native.php?chapter=6_5
 2、根据公司情况，写单元测试，核心接口一定要写，非核心的尽量写
 3、断言类型，可以细化
 ```
+
+一般的删除并不是真正的从数据库里把数据给删除掉，而是修改该行数据的状态，例如把1改为0。
+
+String后面的字段如果是下划线的格式，要转换为驼峰格式的。
 
 **三十六、微信统一下单接口开发之CommonUtils和WXpayUtils开发**
 
@@ -784,7 +785,7 @@ https://pay.weixin.qq.com/wiki/doc/api/native.php?chapter=6_5
 3、加入微信支付配置
 	#微信商户平台
 	wxpay.mer_id=1503808832
-	wxpay.key=xdclasss20182018xdclass2018x018d
+	wxpay.key=classs20182018class2018x018d
 	wxpay.callback=16web.tunnel.qydev.com/pub/api/v1/wechat/order/callback1
 ```
 
@@ -971,13 +972,20 @@ response.getWriter().println("success");
 
 **五十、前后端分离 跨域问题讲解**
 
+当我们访问登录一个网站的时候，会生成一个Cookies，每个Cookies都有一个作用域，如果没有这个同源策略，那么如果网站插入一个JS脚本，该脚本可以获取你本地登录后生成的Cookies信息。
+
+没有这个策略，那么信息可能会被其他网站进行窃取。
+
 ```java 
 1、跨域：浏览器同源策略
 	1995年，同源政策由 Netscape 公司引入浏览器。目前，所有浏览器都实行这个政策。
 	最初，它的含义是指，A网页设置的 Cookie，B网页不能打开，除非这两个网页"同源"。所谓"同源"指的是"三个相同"
+     --------------------------------
 	协议相同  http https
 	域名相同	 www.xxx.com
 	端口相同  80  81
+     --------------------------------
+	上面任意一种不同，那么就是跨域的，无法进行窃取。
 
 	一句话：浏览器从一个域名的网页去请求另一个域名的资源时，域名、端口、协议任一不同，都是跨域
 	
@@ -1160,88 +1168,3 @@ application.properties确认
  3、重启nginx命令
  	./nginx -s reload
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-杂七杂八：
-
-项目技术：JWT/微服务登录鉴权功能。
-
-点击购买，调用微信接口那边的二维码进行扫描支付，支付完后会在数据库插入一条数据。
-
-接入微信支付。
-
-每天进行日志的滚动。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
