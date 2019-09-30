@@ -250,15 +250,15 @@ com.jcn.seckill
 
 > <https://blog.csdn.net/Taoqigongzi_jie/article/details/83025844>
 >
-> 
+> <https://www.cnblogs.com/jasonZh/p/9522772.html>
 
 **缓存雪崩什么情况下会发生？如何避免？**
 
-> 
+> <https://blog.csdn.net/kongtiao5/article/details/82771694#commentBox>
 
 **更新数据库的同时为什么不马上更新缓存，而是删除缓存？**
 
-> 
+> <https://coolshell.cn/articles/17416.html>
 
 **数据库：索引、慢查询优化。**
 
